@@ -1,0 +1,55 @@
+@import "reset.css";
+
+:root {
+  --blue-1: #3392ff;
+  --blue-2: #063f70;
+  --red: #bc2a2e;
+  --white-1: #ffffff;
+  --white-2: #fffef9;
+  --grey-1: #212121;
+  --grey-2: #303030;
+  --grey-3: #161616;
+  --black: #000000;
+
+  /* primary shades */
+  --primary: var(--blue-1);
+  --primary-hover: hsl(from var(--primary-color) h s calc(l + 5));
+  --primary-active: hsl(from var(--primary-color) h s calc(l - 5));
+  --on-primary: var(--white-1);
+
+  /* secondary shades */
+  --secondary: var(--red);
+  --secondary-hover: hsl(from var(--secondary-color) h s calc(l + 5));
+  --secondary-active: hsl(from var(--secondary-color) h s calc(l - 5));
+  --on-secondary: var(--white-1);
+
+  /* button grey */
+  --button-grey: var(--grey-2);
+  --on-button-grey: var(--white-1);
+
+  color-scheme: light;
+  caret-color: var(--primary);
+  accent-color: var(--primary);
+
+  /* social icons */
+  --linkedin: #0077b5;
+  --youtube: #ff0000;
+  --twitterx: #333333;
+  --facebook: #4867aa;
+  --whatsapp: #25d366;
+  --instagram: linear-gradient(
+    #6559ca,
+    #bc318f 30%,
+    #e33f5f 50%,
+    #f77638 70%,
+    #fec66d 100%
+  );
+}
+
+.text-blue {
+  color: var(--blue-2);
+}
+
+input::placeholder {
+  color: hsl(from var(--black) h s l / 0.4);
+}
