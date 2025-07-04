@@ -1,3 +1,5 @@
+import { address, contactEmails, contactPhones } from "./contactInfo";
+
 export enum ContactUsPageInfoType {
   text,
   email,
@@ -28,19 +30,17 @@ export const contactUsPageContent = {
     {
       type: ContactUsPageInfoType.text,
       heading: "Office Address",
-      content: [
-        "Snow Village Indoor Snow Park, Plot 28, Sector 75, Noida, UP 201301 (near Sector 50 Metro Station)",
-      ],
+      content: address,
     },
     {
       type: ContactUsPageInfoType.phone,
       heading: "Phone",
-      content: ["+91 9220807720", "+91 9220447720"],
+      content: contactPhones,
     },
     {
       type: ContactUsPageInfoType.email,
       heading: "Email ID",
-      content: ["snowvillage@cozylounge.in"],
+      content: contactEmails,
     },
   ],
   avtar: "/contact-us/contact-us-avtar.png",
