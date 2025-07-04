@@ -1,0 +1,15 @@
+.image {
+  --_min-height: 22rem;
+  --_max-height: 28rem;
+  --_height: 25vw;
+
+  width: 100%;
+  object-fit: cover;
+  height: clamp(var(--_min-height), var(--_height), var(--_max-height));
+}
+
+.home-page {
+  --_min-height: 35rem;
+  --_max-height: 58rem;
+  --_height: 46.5vw;
+}

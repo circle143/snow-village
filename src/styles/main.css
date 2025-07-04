@@ -1,9 +1,11 @@
-@import "reset.css";
-@import "fonts.css";
+@import "./reset.css";
+@import "./fonts.css";
 
 :root {
   --blue-1: #3392ff;
   --blue-2: #063f70;
+  --blue-3: #005d8c;
+  --blue-4: #cae9fc;
   --red: #bc2a2e;
   --white-1: #ffffff;
   --white-2: #fffef9;
@@ -53,4 +55,11 @@
 
 input::placeholder {
   color: hsl(from var(--black) h s l / 0.4);
+}
+
+body {
+  background-color: var(--blue-4);
+  color: var(--grey-1);
+  background-image: url("/snow-bg.svg");
+  font-family: "Poppins";
 }

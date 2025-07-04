@@ -1,0 +1,22 @@
+.container {
+  --_max-width: 0%;
+  --_min-width: 0%;
+
+  width: min(var(--_min-width), var(--_max-width));
+  margin-inline: auto;
+}
+
+.full {
+  --_max-width: 100%;
+  --_min-width: 100%;
+}
+
+.normal {
+  --_max-width: 78rem;
+  --_min-width: 90%;
+}
+
+.small {
+  --_max-width: 65rem;
+  --_min-width: 90%;
+}
