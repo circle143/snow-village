@@ -2,6 +2,7 @@ export const activitiesPageContent = {
   hero: {
     image: "/activities/activities-hero.png",
   },
+  snowFlake: "/activities/snow-flake.svg",
   info: [
     {
       heading: "Ice Skating Rink",
