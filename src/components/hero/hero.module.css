@@ -1,7 +1,7 @@
 .image {
   --_min-height: 22rem;
   --_max-height: 28rem;
-  --_height: 25vw;
+  --_height: 25vi;
 
   width: 100%;
   object-fit: cover;
@@ -11,5 +11,5 @@
 .home-page {
   --_min-height: 35rem;
   --_max-height: 58rem;
-  --_height: 46.5vw;
+  --_height: 46.5vi;
 }

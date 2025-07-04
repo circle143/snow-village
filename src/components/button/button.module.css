@@ -1,0 +1,71 @@
+.button {
+  background-color: var(--_bg);
+  color: var(--_color);
+
+  font-weight: 700;
+  font-size: clamp(
+    var(--_min-font-size),
+    var(--_font-size),
+    var(--_max-font-size)
+  );
+  text-transform: uppercase;
+
+  border-radius: 0.5rem;
+  padding-inline: 1.5em;
+  padding-block: 0.75em;
+
+  transition: background-color 250ms;
+}
+
+/* button variants */
+.primary {
+  --_bg: var(--primary);
+  --_color: var(--on-primary);
+
+  &:hover {
+    --_bg: var(--primary-hover);
+  }
+
+  &:active {
+    --_bg: var(--primary-active);
+  }
+}
+
+.secondary {
+  --_bg: var(--secondary);
+  --_color: var(--on-secondary);
+
+  &:hover {
+    --_bg: var(--secondary-hover);
+  }
+
+  &:active {
+    --_bg: var(--secondary-active);
+  }
+}
+
+.grey {
+  --_bg: var(--button-grey);
+  --_color: var(--on-button-grey);
+
+  &:hover {
+    --_bg: var(--button-grey-hover);
+  }
+
+  &:active {
+    --_bg: var(--button-grey-active);
+  }
+}
+
+/* button font sizes */
+.font-normal {
+  --_min-font-size: 0.875rem;
+  --_max-font-size: 0.875rem;
+  --_font-size: 0.875rem;
+}
+
+.font-large {
+  --_min-font-size: 1.125rem;
+  --_max-font-size: 1.25rem;
+  --_font-size: 1.75vi;
+}
