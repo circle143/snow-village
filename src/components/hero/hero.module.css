@@ -4,15 +4,15 @@
   --_height: 25vi;
 
   min-height: var(--_min-height);
+
+  display: grid;
 }
 
 .image {
   object-fit: cover;
 
   width: 100%;
-  height: 100%;
-
-  object-position: center center;
+  min-height: 100%;
 }
 
 .home-page {
@@ -21,4 +21,10 @@
   --_height: 40vi;
 
   /* margin-block-start: clamp(3.75rem, 6vi, 5rem); */
+}
+
+.gallery-page {
+  .image {
+    object-position: left center;
+  }
 }

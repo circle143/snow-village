@@ -78,6 +78,11 @@ body {
   gap: 2.5rem;
 }
 
+.about-us-page {
+  display: grid;
+  gap: 2.5rem;
+}
+
 [data-font="snow"] {
   font-family: "Snow", "Satoshi", "Poppins", sans-serif;
   color: var(--blue-2);
