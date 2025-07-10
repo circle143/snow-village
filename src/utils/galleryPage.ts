@@ -46,19 +46,23 @@ export const galleryPageContent = {
   },
   image: [
     {
-      cagetgory: "All",
+      category: "All",
+      normalized: "all",
       items: allGalleryImages,
     },
     {
       category: "Activities & Rides",
+      normalized: "activites-and-rides",
       items: galleryCategories.activities,
     },
     {
       category: "Ambience & Decor",
+      normalized: "ambience-and-decor",
       items: galleryCategories.ambience,
     },
     {
       category: "Customer Moments",
+      normalized: "customer-moments",
       items: galleryCategories.customerMoments,
     },
   ],
