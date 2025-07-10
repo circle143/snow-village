@@ -5,12 +5,11 @@ import styles from "./hero.module.css";
 
 const Hero = ({ image, currentPage }: HeroProps) => {
   return (
-    <Container variant={ContainerVariant.full}>
-      <img
-        className={`${styles["image"]} ${styles[currentPage]}`}
-        src={image}
-        alt=""
-      />
+    <Container
+      variant={ContainerVariant.full}
+      className={`${styles["hero"]} ${styles[currentPage]}`}
+    >
+      <img className={`${styles["image"]} `} src={image} alt="" />
     </Container>
   );
 };

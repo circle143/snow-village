@@ -16,14 +16,14 @@
 
   /* primary shades */
   --primary: var(--blue-1);
-  --primary-hover: hsl(from var(--primary-color) h s calc(l + 5));
-  --primary-active: hsl(from var(--primary-color) h s calc(l - 5));
+  --primary-hover: hsl(from var(--primary) h s calc(l + 5));
+  --primary-active: hsl(from var(--primary) h s calc(l - 5));
   --on-primary: var(--white-1);
 
   /* secondary shades */
   --secondary: var(--red);
-  --secondary-hover: hsl(from var(--secondary-color) h s calc(l + 5));
-  --secondary-active: hsl(from var(--secondary-color) h s calc(l - 5));
+  --secondary-hover: hsl(from var(--secondary) h s calc(l + 5));
+  --secondary-active: hsl(from var(--secondary) h s calc(l - 5));
   --on-secondary: var(--white-1);
 
   /* button grey */
@@ -63,5 +63,27 @@ body {
   background-color: var(--blue-4);
   color: var(--grey-1);
   background-image: url("/snow-bg.svg");
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.home-page {
+  display: grid;
+  gap: 4rem;
+}
+
+[data-font="snow"] {
+  font-family: "Snow", "Satoshi", "Poppins", sans-serif;
+  color: var(--blue-2);
+}
+
+[data-font="satoshi"] {
+  font-family: "Satoshi", "Poppins", sans-serif;
+}
+
+h2 {
+  font-size: clamp(2rem, 2.5vi, 2.5rem);
+  text-align: center;
+  line-height: 2.25rem;
 }

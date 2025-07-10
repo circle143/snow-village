@@ -1,21 +1,44 @@
-const tempGalleryItems = [
-  "/gallery/temp-1.png",
-  "/gallery/temp-2.png",
-  "/gallery/temp-3.png",
-  "/gallery/temp-4.png",
-  "/gallery/temp-5.png",
-  "/gallery/temp-6.png",
-  "/gallery/temp-7.png",
-  "/gallery/temp-8.png",
+const cmGalleryImages = [
+  "/gallery/cm/cm (2).webp",
+  "/gallery/cm/cm (3).webp",
+  "/gallery/cm/cm (4).webp",
+  "/gallery/cm/cm (5).webp",
+  "/gallery/cm/cm (6).webp",
+  "/gallery/cm/cm (7).webp",
+  "/gallery/cm/cm.webp",
+];
+
+const arGalleryImages = [
+  "/gallery/ar/ar (2).webp",
+  "/gallery/ar/ar (3).webp",
+  "/gallery/ar/ar (4).webp",
+  "/gallery/ar/ar (5).webp",
+  "/gallery/ar/ar (6).webp",
+  "/gallery/ar/ar.webp",
+];
+
+const adGalleryImages = [
+  "/gallery/ad/ad (2).webp",
+  "/gallery/ad/ad (3).webp",
+  "/gallery/ad/ad (4).webp",
+  "/gallery/ad/ad (5).webp",
+  "/gallery/ad/ad (6).webp",
+  "/gallery/ad/ad.webp",
 ];
 
 const galleryCategories = {
-  activities: tempGalleryItems,
-  ambience: tempGalleryItems,
-  customerMoments: tempGalleryItems,
+  activities: arGalleryImages,
+  ambience: adGalleryImages,
+  customerMoments: cmGalleryImages,
 };
 
 export const allGalleryImages = Object.values(galleryCategories).flat();
+
+const getRandomImages = (arr: string[], count = 9) => {
+  const shuffled = [...arr].sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, Math.min(count, arr.length));
+};
+export const homeImages = getRandomImages(allGalleryImages);
 
 export const galleryPageContent = {
   hero: {

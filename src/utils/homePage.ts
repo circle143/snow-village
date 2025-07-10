@@ -1,4 +1,4 @@
-import { allGalleryImages } from "./galleryPage";
+import { homeImages } from "./galleryPage";
 
 export const homePageContent = {
   hero: {
@@ -17,6 +17,6 @@ export const homePageContent = {
   },
   gallery: {
     headaing: "Gallery of Giggles & Glacier",
-    images: allGalleryImages,
+    images: homeImages,
   },
 };

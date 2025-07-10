@@ -9,4 +9,5 @@ export enum ContainerVariant {
 export interface ContainerProps {
   variant: ContainerVariant;
   children: ReactNode;
+  className?: string;
 }

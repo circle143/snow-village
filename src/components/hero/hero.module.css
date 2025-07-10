@@ -1,15 +1,24 @@
-.image {
+.hero {
   --_min-height: 22rem;
   --_max-height: 28rem;
   --_height: 25vi;
 
-  width: 100%;
+  min-height: var(--_min-height);
+}
+
+.image {
   object-fit: cover;
-  height: clamp(var(--_min-height), var(--_height), var(--_max-height));
+
+  width: 100%;
+  height: 100%;
+
+  object-position: center center;
 }
 
 .home-page {
-  --_min-height: 35rem;
-  --_max-height: 58rem;
-  --_height: 46.5vi;
+  --_min-height: 31rem;
+  --_max-height: 65rem;
+  --_height: 40vi;
+
+  /* margin-block-start: clamp(3.75rem, 6vi, 5rem); */
 }

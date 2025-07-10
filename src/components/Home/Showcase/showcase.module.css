@@ -1,0 +1,6 @@
+.showcase {
+  display: grid;
+  gap: clamp(1.75rem, 2.75vi, 2.5rem);
+
+  text-align: center;
+}
