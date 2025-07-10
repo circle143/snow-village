@@ -1,0 +1,47 @@
+.activity-group {
+  display: grid;
+  gap: clamp(2.5rem, 4vi, 4rem);
+
+  position: relative;
+
+  &::before {
+    display: none;
+    content: "";
+    position: absolute;
+
+    top: -1rem;
+    bottom: -1rem;
+    width: 1rem;
+
+    background-color: #a4d4ff;
+    border-radius: 1rem;
+
+    left: 50%;
+    translate: -50%;
+
+    @media (min-width: 48rem) {
+      display: block;
+    }
+  }
+}
+
+.sticky {
+  display: none;
+  height: 0;
+  overflow: visible;
+  position: sticky;
+  top: 20rem;
+
+  z-index: 2;
+
+  @media (min-width: 48rem) {
+    display: block;
+  }
+
+  img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+  }
+}

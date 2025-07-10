@@ -83,6 +83,15 @@ body {
   gap: 2.5rem;
 }
 
+.activities-page {
+  display: grid;
+  gap: 3.75rem;
+
+  @media (min-width: 48rem) {
+    gap: 4.5rem;
+  }
+}
+
 [data-font="snow"] {
   font-family: "Snow", "Satoshi", "Poppins", sans-serif;
   color: var(--blue-2);
