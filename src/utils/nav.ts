@@ -4,36 +4,43 @@ const rootLinks = {
   home: {
     key: "Home",
     value: "/",
+    newPage: false,
   },
   aboutUs: {
     key: "About Us",
     value: "/about-us",
+    newPage: false,
   },
   activities: {
     key: "Activities",
     value: "/activities",
+    newPage: false,
   },
   gallery: {
     key: "Gallery",
     value: "/gallery",
+    newPage: false,
   },
   contactUs: {
     key: "Contact Us",
     value: "/contact-us",
+    newPage: false,
   },
   privacyPolicy: {
     key: "Privacy Policy",
     value: "/privacy-policy",
+    newPage: false,
   },
   termsAndConditions: {
     key: "Terms & Conditions",
     value: "/terms-and-conditions",
+    newPage: false,
   },
 };
 
 export const bookTicketsLink = {
   key: "Book Now",
-  value: "",
+  value: "https://circledigital.in",
   newPage: true,
 };
 
@@ -70,21 +77,30 @@ export const footer = {
     heading: "Follow us on:",
     items: [
       {
-        image: "",
+        image: "/instagram.svg",
         link: socialMediaLinks.instagram,
       },
       {
-        image: "",
+        image: "/facebook.svg",
         link: socialMediaLinks.facebook,
       },
       {
-        image: "",
+        image: "/youtube.svg",
         link: socialMediaLinks.youtube,
       },
       {
-        image: "",
+        image: "/linkedin.svg",
         link: socialMediaLinks.linkedin,
       },
     ],
   },
+  copyright: [
+    {
+      text: "© Copyright Cozy Food & Entertainment LLP Design & Development By ",
+    },
+    {
+      text: "Circle Digital Solutions.",
+      href: "https://circledigital.in",
+    },
+  ],
 };
