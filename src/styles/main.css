@@ -71,21 +71,27 @@ body {
 .home-page {
   display: grid;
   gap: 4rem;
+  margin-block-end: clamp(2rem, 2.5vi, 2.5rem);
 }
 
 .gallery-page {
   display: grid;
   gap: 2.5rem;
+  margin-block-end: clamp(2rem, 3vi, 3rem);
 }
 
 .about-us-page {
   display: grid;
   gap: 2.5rem;
+
+  margin-block-end: clamp(3rem, 4vi, 4rem);
 }
 
 .activities-page {
   display: grid;
   gap: 3.75rem;
+
+  margin-block-end: clamp(2rem, 10vi, 10rem);
 
   @media (min-width: 48rem) {
     gap: 4.5rem;
