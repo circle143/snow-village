@@ -9,6 +9,8 @@
   display: grid;
   gap: var(--_gap);
 
+  /* overflow: hidden; */
+
   padding-block-end: clamp(12rem, 50vi, 25rem);
   position: relative;
 }
@@ -43,8 +45,7 @@
 
 .avatar {
   position: absolute;
-
-  translate: 20% 25%;
+  translate: 10% 25%;
 
   bottom: 0;
   right: 0;
@@ -55,6 +56,6 @@
   }
 
   img {
-    height: clamp(22rem, 70vi, 35rem);
+    height: clamp(18rem, 70vi, 35rem);
   }
 }
