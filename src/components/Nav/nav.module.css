@@ -71,14 +71,19 @@
 
   a {
     --_color: white;
-    text-decoration: none;
+    text-decoration-color: transparent;
+    text-underline-offset: 0.5rem;
+    text-decoration-thickness: 0.125rem;
 
     color: var(--_color);
-    transition: color 250ms;
+    transition:
+      color 250ms,
+      text-decoration-color 250ms;
+    font-weight: 600;
 
     &:hover,
     &:focus {
-      --_color: var(--secondary);
+      text-decoration-color: var(--secondary);
     }
 
     &[data-active] {

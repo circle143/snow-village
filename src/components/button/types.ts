@@ -12,6 +12,7 @@ export enum ButtonFontSize {
 export interface ButtonProps {
   variant: ButtonVariant;
   label: string;
-  onPress: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  onPress?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   fontSize: ButtonFontSize;
+  type?: string;
 }

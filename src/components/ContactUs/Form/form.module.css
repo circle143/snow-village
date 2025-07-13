@@ -1,0 +1,59 @@
+.form {
+  --_gap: 1.25rem;
+  padding-inline: clamp(0.875rem, 2vi, 2rem);
+  padding-block: 2rem;
+
+  background-color: hsl(from white h s l / 0.4);
+  border-radius: 1rem;
+
+  backdrop-filter: blur(0.5rem);
+  display: grid;
+  gap: var(--_gap);
+
+  @media (min-width: 64em) {
+    flex: 2;
+  }
+}
+
+.heading {
+  font-size: clamp(1.125rem, 2vi, 2rem);
+  font-weight: 600;
+
+  .blue {
+    color: var(--blue-2);
+  }
+}
+
+.form-elements {
+  display: grid;
+  gap: var(--_gap);
+
+  div {
+    text-align: center;
+  }
+}
+
+.label {
+  display: grid;
+  gap: calc(var(--_gap) / 2);
+
+  font-size: clamp(0.875, 1.25vi, 1.125rem);
+  color: black;
+  font-weight: 600;
+
+  input,
+  textarea,
+  select {
+    padding-inline: clamp(1.875rem, 2vi, 2rem);
+    padding-block: clamp(0.875rem, 1vi, 1rem);
+    border-radius: 1rem;
+    background-color: white;
+
+    border: 0.025rem solid hsl(from black h s l / 0.3);
+    max-width: 100%;
+  }
+
+  textarea {
+    resize: none;
+  }
+}

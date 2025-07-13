@@ -1,3 +1,4 @@
+import ContactGroup from "@/components/ContactUs/ContactGroup/ContactGroup";
 import Map from "@/components/ContactUs/Map/Map";
 import Hero from "@/components/hero/hero";
 import { WebpageValue } from "@/utils/pages";
@@ -5,6 +6,19 @@ import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/contact-us/")({
   component: RouteComponent,
+  head: () => {
+    return {
+      meta: [
+        {
+          name: "description",
+          content: "",
+        },
+        {
+          title: "Snow Village - Contact Us",
+        },
+      ],
+    };
+  },
 });
 
 function RouteComponent() {
@@ -14,7 +28,7 @@ function RouteComponent() {
         image="/contact-us/contact-us-hero.png"
         currentPage={WebpageValue.contactUs}
       />
-
+      <ContactGroup />
       <Map />
     </div>
   );
