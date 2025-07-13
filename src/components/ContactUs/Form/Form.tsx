@@ -10,6 +10,7 @@ const ContactUsForm = () => {
 
     e.currentTarget.reset();
   };
+
   return (
     <div className={styles["form"]}>
       <h3 className={styles["heading"]}>
@@ -65,6 +66,7 @@ const ContactUsForm = () => {
             </label>
           );
         })}
+
         <div>
           <Button
             type="submit"
