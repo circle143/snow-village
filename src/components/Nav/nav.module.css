@@ -1,0 +1,88 @@
+.nav {
+  background-color: var(--blue-1);
+  padding-block: 0.5rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.second {
+  display: flex;
+  gap: 1.25rem;
+
+  align-items: center;
+}
+
+.phone {
+  display: none;
+
+  @media (min-width: 40em) {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .phone-info {
+    color: white;
+
+    p {
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    a {
+      color: white;
+      font-size: 0.875rem;
+      font-weight: 600;
+
+      text-decoration-color: transparent;
+      transition: text-decoration-color 250ms;
+
+      &:hover,
+      &:focus {
+        text-decoration-color: currentColor;
+      }
+    }
+  }
+}
+
+.first {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  @media (min-width: 64em) {
+    flex-direction: row-reverse;
+    gap: clamp(1.5rem, 4vi, 4rem);
+  }
+}
+
+.links-lg {
+  display: flex;
+  gap: clamp(1.5rem, 2vi, 2rem);
+
+  font-size: 0.875rem;
+  font-weight: 500;
+
+  a {
+    --_color: white;
+    text-decoration: none;
+
+    color: var(--_color);
+    transition: color 250ms;
+
+    &:hover,
+    &:focus {
+      --_color: var(--secondary);
+    }
+
+    &[data-active] {
+      --_color: var(--secondary);
+    }
+  }
+}

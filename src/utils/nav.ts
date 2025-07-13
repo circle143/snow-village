@@ -44,13 +44,19 @@ export const bookTicketsLink = {
   newPage: true,
 };
 
+const rootLinksArr = Object.values(rootLinks);
+
 export const navLinks = {
   logo: "/logo.svg",
-  links: Object.values(rootLinks),
+  links: rootLinksArr.filter(
+    (item) =>
+      item.key !== rootLinks.privacyPolicy.key &&
+      item.key !== rootLinks.termsAndConditions.key,
+  ),
   doubts: {
     text: "Have doubts?",
     phone: contactPhones[0],
-    image: "",
+    image: "/phone.svg",
   },
 };
 

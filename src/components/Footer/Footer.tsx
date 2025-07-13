@@ -3,6 +3,7 @@ import styles from "./footer.module.css";
 import { Fragment } from "react";
 import Container from "../container/Container";
 import { ContainerVariant } from "../container/types";
+import { Link } from "@tanstack/react-router";
 
 const Footer = () => {
   return (
@@ -21,12 +22,12 @@ const Footer = () => {
             {footer.importantLinks.items.map((item, ind) => {
               return (
                 <div key={item.value + ind}>
-                  <a
-                    href={item.value}
+                  <Link
+                    to={item.value}
                     target={item.newPage ? "_blank" : "_self"}
                   >
                     {item.key}
-                  </a>
+                  </Link>
                 </div>
               );
             })}
@@ -38,13 +39,13 @@ const Footer = () => {
             {footer.more.items.map((item, ind) => {
               return (
                 <div key={item.value + ind}>
-                  <a
-                    href={item.value}
+                  <Link
+                    to={item.value}
                     key={item.value}
                     target={item.newPage ? "_blank" : "_self"}
                   >
                     {item.key}
-                  </a>
+                  </Link>
                 </div>
               );
             })}
