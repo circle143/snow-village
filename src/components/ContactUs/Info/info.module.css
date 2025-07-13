@@ -9,7 +9,7 @@
   display: grid;
   gap: var(--_gap);
 
-  padding-block-end: clamp(12rem, 25vi, 25rem);
+  padding-block-end: clamp(12rem, 50vi, 25rem);
   position: relative;
 }
 
@@ -44,26 +44,17 @@
 .avatar {
   position: absolute;
 
-  /* &::before { */
-  /*   content: ""; */
-  /*   position: absolute; */
-  /*   inset: 0; */
-  /*   background-image: url("/contact-us/contact-us-avtar.png"); */
-  /*   background-repeat: no-repeat; */
-  /*   background-position: right; */
-  /*   background-size: contain; */
-  /**/
-  /*   outline: 2px solid red; */
-  /**/
-  /*   translate: 12% -30%; */
-  /* } */
   translate: 20% 25%;
 
   bottom: 0;
   right: 0;
   z-index: -1;
+
+  @media (min-width: 64em) {
+    translate: 15% 32%;
+  }
+
   img {
-    /* visibility: hidden; */
-    height: clamp(22rem, 35vi, 35rem);
+    height: clamp(22rem, 70vi, 35rem);
   }
 }
