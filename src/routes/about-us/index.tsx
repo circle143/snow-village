@@ -5,6 +5,20 @@ import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/about-us/")({
   component: RouteComponent,
+  head: () => {
+    return {
+      meta: [
+        {
+          name: "description",
+          content:
+            "Explore the story of Snow Village—our vision, traditions, and what makes our snowy retreat a truly magical destination.Explore the story of Snow Village—our vision, traditions, and what makes our snowy retreat a truly magical destination.Explore the story of Snow Village—our vision, traditions, and what makes our snowy retreat a truly magical destination.",
+        },
+        {
+          title: "Snow Village - About Us",
+        },
+      ],
+    };
+  },
 });
 
 function RouteComponent() {

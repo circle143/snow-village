@@ -11,7 +11,8 @@ export const Route = createFileRoute("/contact-us/")({
       meta: [
         {
           name: "description",
-          content: "",
+          content:
+            "Plan your visit to Snow Village or ask us anything about our experiences, stays, or activities. We're here to help.",
         },
         {
           title: "Snow Village - Contact Us",
