@@ -4,15 +4,10 @@ import { ContainerVariant } from "@/components/container/types";
 import { galleryPageContent } from "@/utils/galleryPage";
 import { Link } from "@tanstack/react-router";
 
-const Filters = ({ filter }: { filter: string }) => {
+const Filters = () => {
   return (
     <Container variant={ContainerVariant.normal} className={styles["filter"]}>
       {galleryPageContent.image.map(({ category, normalized }) => {
-        let classname = "";
-        if (filter === normalized) {
-          classname = styles["active"];
-        }
-
         return (
           <Link
             to="/gallery"

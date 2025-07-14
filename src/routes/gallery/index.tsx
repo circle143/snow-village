@@ -46,7 +46,7 @@ function RouteComponent() {
         image="/gallery/gallery-hero.png"
         currentPage={WebpageValue.gallery}
       />
-      <Filters filter={filter} key={filter} />
+      <Filters key={filter} />
       <Container variant={ContainerVariant.normal}>
         <Images images={images} key={filter} />
       </Container>
