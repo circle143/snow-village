@@ -4,13 +4,17 @@ import Container from "@/components/container/Container";
 import { ContainerVariant } from "@/components/container/types";
 import { homePageContent } from "@/utils/homePage";
 import styles from "./about.module.css";
+import { useNavigate } from "@tanstack/react-router";
 
 const HomeAbout = () => {
+  const navigate = useNavigate({ from: "/" });
   const buttonComp = (
     <div className={styles["button"]}>
       <Button
         label={homePageContent.info.buttonText}
-        onPress={() => {}}
+        onPress={() => {
+          navigate({ to: "/activities" });
+        }}
         variant={ButtonVariant.secondary}
         fontSize={ButtonFontSize.normal}
       />
