@@ -3,12 +3,50 @@ import styles from "./form.module.css";
 import { Fragment } from "react";
 import Button from "@/components/button/button";
 import { ButtonFontSize, ButtonVariant } from "@/components/button/types";
-
+import { toast } from "react-toastify";
+import { toE164 } from "@/utils/form";
 const ContactUsForm = () => {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    e.currentTarget.reset();
+    const form = e.currentTarget; // ✅ Save the reference
+    const formData = new FormData(form);
+    const data: Record<string, string> = {};
+
+    formData.forEach((value, key) => {
+      data[key] = value.toString();
+    });
+
+    if (data["phone"]) {
+      const formattedPhone = toE164(data["phone"]);
+      if (!formattedPhone) {
+        toast.error("Please enter a valid phone number.");
+        return;
+      }
+      data["phone"] = formattedPhone;
+    }
+
+    try {
+      const response = await fetch(
+        "https://api-wo48.onrender.com/snow-village/message",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        },
+      );
+
+      if (!response.ok) {
+        throw new Error("Something went wrong. Please try again.");
+      }
+
+      toast.success("Message sent successfully!");
+      form.reset(); // ✅ Use the saved reference
+    } catch (err: any) {
+      toast.error(err.message || "Failed to send message.");
+    }
   };
 
   return (
