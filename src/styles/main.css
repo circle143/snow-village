@@ -74,7 +74,8 @@ body {
   margin-block-end: clamp(2rem, 2.5vi, 2.5rem);
 }
 
-.gallery-page {
+.gallery-page,
+.terms-and-conditions-page {
   display: grid;
   gap: 2.5rem;
   margin-block-end: clamp(2rem, 3vi, 3rem);
