@@ -48,7 +48,14 @@ const HomeAbout = () => {
         </div>
 
         <div className={styles["video"]}>
-          <video src={homePageContent.info.video} loop autoPlay />
+          <video
+            src={homePageContent.info.video}
+            loop
+            autoPlay
+            muted
+            playsInline
+            controls={false}
+          />
 
           {buttonComp}
         </div>
