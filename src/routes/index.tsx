@@ -7,11 +7,19 @@ import { useMediaQuery } from "usehooks-ts";
 
 export const Route = createFileRoute("/")({
   component: App,
+  head: () => {
+    return {
+      meta: [
+        {
+          title: "Noida's Biggest Snowpark | Snow Village",
+        },
+      ],
+    };
+  },
 });
 
 function App() {
   const matches = useMediaQuery("(min-width: 45rem)");
-  console.log(matches);
 
   return (
     <div className="home-page">
