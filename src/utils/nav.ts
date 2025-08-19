@@ -40,7 +40,7 @@ const rootLinks = {
 
 export const bookTicketsLink = {
   key: "Book Now",
-  value: "https://circledigital.in",
+  value: "https://in.bookmyshow.com/activities/snow-village/ET00453168",
   newPage: true,
 };
 

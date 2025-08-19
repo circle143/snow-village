@@ -2,6 +2,7 @@ import { bookTicketsButtonText } from "@/utils/bookTicketsButton";
 import Button from "../button/button";
 import { ButtonFontSize, ButtonVariant } from "../button/types";
 import type { BookTicketsButtonProps } from "./types";
+import { bookTicketsLink } from "@/utils/nav";
 
 const BookTicketsButton = ({ extendedText }: BookTicketsButtonProps) => {
   const label = extendedText
@@ -12,6 +13,7 @@ const BookTicketsButton = ({ extendedText }: BookTicketsButtonProps) => {
     _: React.MouseEvent<HTMLButtonElement, MouseEvent>,
   ) => {
     // book ticket action here
+    window.open(bookTicketsLink.value, "_blank");
   };
 
   return (
