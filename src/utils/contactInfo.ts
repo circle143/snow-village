@@ -1,6 +1,6 @@
 export const contactEmails = ["snowvillage@cozylounge.in"];
 
-export const contactPhones = ["+91 9220807720", "+91 9220447720"];
+export const contactPhones = ["+91 9211072266", "+91 9211072266"];
 
 export const address = [
   "4th Floor, E tower, Spectrum phase 2, sector 75, Noida",
