@@ -9,6 +9,6 @@ export const address = [
 export const socialMediaLinks = {
   facebook: "https://www.facebook.com/share/1Mxz3uRjDQ/",
   instagram: "https://www.instagram.com/village.snow?igsh=ODdyaGZyMW1yZzQ3",
-  youtube: "",
+  youtube: "https://www.youtube.com/@SnowVillage75",
   linkedin: "",
 };

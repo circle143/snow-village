@@ -94,10 +94,10 @@ export const footer = {
         image: "/youtube.svg",
         link: socialMediaLinks.youtube,
       },
-      {
-        image: "/linkedin.svg",
-        link: socialMediaLinks.linkedin,
-      },
+      // {
+      //   image: "/linkedin.svg",
+      //   link: socialMediaLinks.linkedin,
+      // },
     ],
   },
   copyright: [
@@ -105,8 +105,8 @@ export const footer = {
       text: "© Copyright Cozy Food & Entertainment LLP Design & Development By ",
     },
     {
-      text: "Circle Digital Solutions.",
-      href: "https://circledigital.in",
+      text: "Tech Prizm.",
+      href: "https://in.linkedin.com/company/tech-prizm",
     },
   ],
 };
