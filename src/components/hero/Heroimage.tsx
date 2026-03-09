@@ -1,7 +1,7 @@
 import Container from "../container/Container";
 import { ContainerVariant } from "../container/types";
 import type { HeroImageProps } from "./types";
-import styles from "./heroImage.module.css";
+import styles from "./Heroimage.module.css";
 
 const HeroImage = ({ image, currentPage, title }: HeroImageProps) => {
   return (
