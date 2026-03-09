@@ -4,7 +4,7 @@ import HomeAbout from "@/components/Home/About/About";
 import Reviews from "@/components/Home/review/Reviews";
 import { WebpageValue } from "@/utils/pages";
 import { createFileRoute } from "@tanstack/react-router";
-import { useMediaQuery } from "usehooks-ts";
+
 
 export const Route = createFileRoute("/")({
   component: App,
