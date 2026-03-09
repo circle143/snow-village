@@ -4,7 +4,7 @@ export const aboutUsPageContent = {
   },
   info: {
     heading: "About Us",
-    image: "/about-us/about-us-img.png",
+    image: "/about-us/about-us-img1.png",
     content: [
       "Welcome to Snow Village, Noida’s coolest hangout spot (pun totally intended). It’s not a dream—it’s a full-blown winter wonderland where snowflakes fall all year round, slides are made of snow, and even the penguins are vibing.",
       "Built for snowball fights, selfie sessions, igloo chills, and non-stop whoa moments—this is your escape from boring weekends and “same old” plans. Think real snow, freezing fun, and a whole village that’s straight out of your snow-globe fantasy (minus the packing and flights to Switzerland).",

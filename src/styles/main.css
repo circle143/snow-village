@@ -87,7 +87,10 @@ body {
 
   margin-block-end: clamp(3rem, 4vi, 4rem);
 }
-
+.contact-us-page{
+  display: grid;
+  gap: 2.5rem;
+}
 .activities-page {
   display: grid;
   gap: 3.75rem;

@@ -1,7 +1,7 @@
 import Container from "@/components/container/Container";
 import { ContainerVariant } from "@/components/container/types";
 import Filters from "@/components/gallery/Filters/Filters";
-import Hero from "@/components/hero/hero";
+import HeroVideoTitle from "@/components/hero/Herovideotitle";
 import Images from "@/components/Images/Images";
 import { galleryPageContent } from "@/utils/galleryPage";
 import { WebpageValue } from "@/utils/pages";
@@ -42,10 +42,11 @@ function RouteComponent() {
   return (
     <div className="gallery-page">
       {" "}
-      <Hero
-        image="/gallery/gallery-hero.png"
-        currentPage={WebpageValue.gallery}
-      />
+      <HeroVideoTitle
+  image="/home/Snow-Village.mp4"
+  currentPage={WebpageValue.gallery}
+  title="Gallery"
+/>  
       <Filters key={filter} />
       <Container variant={ContainerVariant.normal}>
         <Images images={images} key={filter} />

@@ -9,7 +9,14 @@ const Hero = ({ image, currentPage }: HeroProps) => {
       variant={ContainerVariant.full}
       className={`${styles["hero"]} ${styles[currentPage]}`}
     >
-      <img className={`${styles["image"]} `} src={image} alt="" />
+          <video
+        className={styles["image"]}
+        src={image}
+        autoPlay
+        muted
+        loop
+        playsInline
+      />
     </Container>
   );
 };

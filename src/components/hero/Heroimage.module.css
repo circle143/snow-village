@@ -1,0 +1,63 @@
+.hero {
+    --_min-height: 22rem;
+    --_max-height: 28rem;
+    --_height: 25vi;
+    min-height: var(--_min-height);
+  
+    display: grid;
+    grid-template-areas: "stack";
+    isolation: isolate;
+  }
+  
+  .hero > * {
+    grid-area: stack;
+  }
+  
+  .image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    display: block;
+    z-index: 0;
+  }
+  
+  .overlay {
+    background: rgba(0, 0, 0, 0.45);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    padding-inline: 1.5rem;
+    text-align: center;
+  }
+  
+  .title {
+    color: #ffffff;
+    font-size: clamp(1.75rem, 5vi, 4rem);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.15;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.55);
+    margin: 0;
+  }
+  
+  .home-page {
+    --_min-height: 31rem;
+    --_max-height: 65rem;
+    --_height: 40vi;
+  }
+  
+  .gallery-page {
+    .image {
+      object-position: left center;
+    }
+  }

@@ -1,0 +1,469 @@
+.section {
+  padding: 3rem 1rem;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin: 0;
+}
+
+.title {
+  margin: 0.25rem 0;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  line-height: 1.1;
+}
+
+.subtitle {
+  margin: 0.5rem auto 0;
+  max-width: 55ch;
+  opacity: 0.85;
+}
+
+.grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card {
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 500ms ease both;
+  animation-delay: var(--delay, 0ms);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.img-wrapper {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.review-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.google-badge {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.google-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.body {
+  padding: 1rem 1rem 1.1rem;
+}
+
+.author-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  object-fit: cover;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.author-meta {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.author-name {
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.date {
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.stars {
+  display: flex;
+  gap: 0.15rem;
+  margin: 0.5rem 0;
+}
+
+.star {
+  width: 18px;
+  height: 18px;
+}
+
+.star--filled {
+  color: #fbbf24;
+}
+
+.star--empty {
+  color: rgba(251, 191, 36, 0.35);
+}
+
+.review-text {
+  margin: 0;
+  line-height: 1.45;
+  opacity: 0.9;
+}
+
+.footer {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+}
+
+.cta:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ── Skeleton styles ───────────────────────────────────────────────────── */
+.skeleton {
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.05)
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.1s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.skeleton-img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 0;
+}
+
+.skeleton-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+}
+
+.skeleton-name {
+  height: 12px;
+  width: 140px;
+}
+
+.skeleton-date {
+  height: 10px;
+  width: 90px;
+  margin-top: 6px;
+}
+
+.skeleton-stars {
+  height: 14px;
+  width: 120px;
+  margin: 10px 0;
+}
+
+.skeleton-line {
+  height: 10px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.skeleton-line-short {
+  height: 10px;
+  width: 70%;
+  margin-top: 8px;
+}
+
+/* ── Section ─────────────────────────────────────── */
+.section {
+    padding-block: clamp(3rem, 8vi, 6rem);
+    padding-inline: clamp(1rem, 5vi, 4rem);
+    background: #eaf4fb;
+  }
+  
+  .header {
+    text-align: center;
+    margin-block-end: clamp(2rem, 4vi, 3rem);
+  }
+  
+  .eyebrow {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #d32f2f;
+    margin: 0 0 0.4rem;
+  }
+  
+  .title {
+    font-size: clamp(1.8rem, 4vi, 2.8rem);
+    font-weight: 800;
+    color: #0d1b2a;
+    margin: 0 0 0.5rem;
+    line-height: 1.1;
+  }
+  
+  .subtitle {
+    font-size: 0.95rem;
+    color: #5a6a7a;
+    margin: 0;
+  }
+  
+  /* ── Grid ────────────────────────────────────────── */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    max-width: 72rem;
+    margin-inline: auto;
+  }
+  
+  @media (max-width: 56rem) {
+    .grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 36rem) {
+    .grid { grid-template-columns: 1fr; }
+  }
+  
+  /* ── Card ────────────────────────────────────────── */
+  .card {
+    background: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 12px rgba(13, 27, 42, 0.07);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+    animation: cardIn 0.4s ease both;
+    animation-delay: var(--delay, 0ms);
+  }
+  
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(13, 27, 42, 0.13);
+  }
+  
+  @keyframes cardIn {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* ── Review photo (customer-uploaded) ───────────── */
+  .img-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: #d0e8f5;
+    overflow: hidden;
+  }
+  
+  .review-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  
+  .card:hover .review-img {
+    transform: scale(1.04);
+  }
+  
+  /* Google badge pinned top-right of image */
+  .google-badge {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    background: #fff;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.18);
+  }
+  
+  .google-icon {
+    width: 1.1rem;
+    height: 1.1rem;
+    display: block;
+  }
+  
+  /* ── Card body ───────────────────────────────────── */
+  .body {
+    padding: 1rem 1.2rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    flex: 1;
+  }
+  
+  /* ── Author row — avatar + name + date ──────────── */
+  .author-row {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+  }
+  
+  /* Small circular author profile photo */
+  .avatar {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid #eaf4fb;
+  }
+  
+  .author-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    min-width: 0;
+  }
+  
+  .author-name {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #0d1b2a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .date {
+    font-size: 0.7rem;
+    color: #8a9aaa;
+  }
+  
+  /* ── Stars ───────────────────────────────────────── */
+  .stars {
+    display: flex;
+    gap: 0.1rem;
+  }
+  
+  .star { width: 0.95rem; height: 0.95rem; }
+  .star--filled { color: #f9a825; }
+  .star--empty  { color: #d0d8e0; }
+  
+  /* ── Review text ─────────────────────────────────── */
+  .review-text {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: #3a4a5a;
+    margin: 0;
+    flex: 1;
+  }
+  
+  /* ── Footer CTA ──────────────────────────────────── */
+  .footer {
+    display: flex;
+    justify-content: center;
+    margin-block-start: clamp(1.5rem, 3vi, 2.5rem);
+  }
+  
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.7rem 1.8rem;
+    background: #d32f2f;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 2rem;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: background 0.2s ease, transform 0.15s ease;
+  }
+  
+  .cta:hover {
+    background: #b71c1c;
+    transform: translateY(-1px);
+  }
+  
+  /* ── Skeleton ────────────────────────────────────── */
+  @keyframes shimmer {
+    0%   { background-position: -600px 0; }
+    100% { background-position: 600px 0; }
+  }
+  
+  .skeleton {
+    background: linear-gradient(90deg, #e0eaf2 25%, #cddae6 50%, #e0eaf2 75%);
+    background-size: 1200px 100%;
+    animation: shimmer 1.5s infinite linear;
+    border-radius: 0.35rem;
+  }
+  
+  .skeleton-img        { width: 100%; aspect-ratio: 4 / 3; border-radius: 0; }
+  .skeleton-avatar     { width: 2.2rem; height: 2.2rem; border-radius: 50%; flex-shrink: 0; }
+  .skeleton-name       { height: 0.72rem; width: 55%; }
+  .skeleton-date       { height: 0.6rem;  width: 35%; }
+  .skeleton-stars      { height: 0.72rem; width: 5.5rem; }
+  .skeleton-line       { height: 0.62rem; width: 100%; }
+  .skeleton-line-short { height: 0.62rem; width: 65%; }

@@ -1,5 +1,5 @@
 import AboutInfo from "@/components/AboutUs/Info/Info";
-import Hero from "@/components/hero/hero";
+import HeroImage from "@/components/hero/Heroimage";
 import { WebpageValue } from "@/utils/pages";
 import { createFileRoute } from "@tanstack/react-router";
 
@@ -24,9 +24,10 @@ export const Route = createFileRoute("/about-us/")({
 function RouteComponent() {
   return (
     <div className="about-us-page">
-      <Hero
+      <HeroImage
         image="/about-us/about-us-hero.png"
         currentPage={WebpageValue.aboutUs}
+        title="About Us"
       />
 
       <AboutInfo />

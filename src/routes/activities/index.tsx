@@ -1,5 +1,5 @@
 import ActivityGroup from "@/components/Activities/ActivityGroup/ActivityGroup";
-import Hero from "@/components/hero/hero";
+import HeroVideoTitle from "@/components/hero/Herovideotitle";
 import { WebpageValue } from "@/utils/pages";
 import { createFileRoute } from "@tanstack/react-router";
 
@@ -24,10 +24,11 @@ export const Route = createFileRoute("/activities/")({
 function RouteComponent() {
   return (
     <div className="activities-page">
-      <Hero
-        image="/activities/activities-hero.png"
-        currentPage={WebpageValue.activities}
-      />
+   <HeroVideoTitle
+  image="/home/Snow-Village.mp4"
+  currentPage={WebpageValue.activities}
+  title="Activities"
+/>
 
       <ActivityGroup />
     </div>

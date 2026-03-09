@@ -1,29 +1,33 @@
 const cmGalleryImages = [
-  "/gallery/cm/cm (2).webp",
-  "/gallery/cm/cm (3).webp",
-  "/gallery/cm/cm (4).webp",
-  "/gallery/cm/cm (5).webp",
-  "/gallery/cm/cm (6).webp",
-  "/gallery/cm/cm (7).webp",
-  "/gallery/cm/cm.webp",
+  "/gallery/cm/Customer 1.webp",
+  "/gallery/cm/Customer 2.webp",
+  "/gallery/cm/Customer 3.webp",
+  "/gallery/cm/Customer 5.webp",
+  "/gallery/cm/Customer 6.webp",
+  "/gallery/cm/Customer 7.webp",
+  "/gallery/cm/Customer 8.webp",
+  "/gallery/cm/Customer 9.webp",
 ];
 
 const arGalleryImages = [
-  "/gallery/ar/ar (2).webp",
-  "/gallery/ar/ar (3).webp",
-  "/gallery/ar/ar (4).webp",
-  "/gallery/ar/ar (5).webp",
-  "/gallery/ar/ar (6).webp",
-  "/gallery/ar/ar.webp",
+  "/gallery/ar/Dancing-people.jpg",
+  "/gallery/ar/ICE-SKATING.jpg",
+  "/gallery/ar/Sledge-Pulling.jpg",
+  "/gallery/ar/Snow-Ball-Fight.jpg",
+  "/gallery/ar/Straight-Slide.jpg",
+  "/gallery/ar/Tube-Slide.jpg",
 ];
 
 const adGalleryImages = [
-  "/gallery/ad/ad (2).webp",
-  "/gallery/ad/ad (3).webp",
-  "/gallery/ad/ad (4).webp",
-  "/gallery/ad/ad (5).webp",
-  "/gallery/ad/ad (6).webp",
-  "/gallery/ad/ad.webp",
+  "/gallery/ad/1.png",
+  "/gallery/ad/2.png",
+  "/gallery/ad/3.jpg",
+  "/gallery/ad/4.jpg",
+  "/gallery/ad/5.png",
+  "/gallery/ad/6.png",
+  "/gallery/ad/7.png",
+  "/gallery/ad/8.png",
+  "/gallery/ad/9.png",
 ];
 
 const galleryCategories = {

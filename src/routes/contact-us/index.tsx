@@ -1,6 +1,6 @@
 import ContactGroup from "@/components/ContactUs/ContactGroup/ContactGroup";
 import Map from "@/components/ContactUs/Map/Map";
-import Hero from "@/components/hero/hero";
+import HeroVideoTitle from "@/components/hero/Herovideotitle";
 import { WebpageValue } from "@/utils/pages";
 import { createFileRoute } from "@tanstack/react-router";
 
@@ -25,9 +25,10 @@ export const Route = createFileRoute("/contact-us/")({
 function RouteComponent() {
   return (
     <div className="contact-us-page">
-      <Hero
-        image="/contact-us/contact-us-hero.png"
+      <HeroVideoTitle
+        image="/home/Snow-Village.mp4"
         currentPage={WebpageValue.contactUs}
+        title="Contact Us"
       />
       <ContactGroup />
       <Map />
