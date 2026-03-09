@@ -1,7 +1,7 @@
 import Container from "../container/Container";
 import { ContainerVariant } from "../container/types";
 import type { HeroVideoTitleProps } from "./types";
-import styles from "./heroVideoTitle.module.css";
+import styles from "./HeroVideoTitle.module.css";
 
 const HeroVideoTitle = ({ image, currentPage, title }: HeroVideoTitleProps) => {
   return (
