@@ -120,12 +120,6 @@
 
 // export default ContactUsForm;
 
-
-
-
-
-
-
 import { contactUsPageContent, FormElementType } from "@/utils/contactUsPage";
 import styles from "./form.module.css";
 import { Fragment } from "react";
@@ -160,13 +154,16 @@ const ContactUsForm = () => {
 
     try {
       // 👇 ONLY CHANGE THIS LINE - Replace the URL
-      const response = await fetch("/api/snow-village", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        "https://email-sender-174740019883.asia-south2.run.app/snow-village/message",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
         },
-        body: JSON.stringify(data),
-      });
+      );
 
       if (!response.ok) {
         throw new Error("Something went wrong. Please try again.");
@@ -185,7 +182,9 @@ const ContactUsForm = () => {
         {contactUsPageContent.form.heading.map((item, index) => {
           const blue = index == contactUsPageContent.form.heading.length - 1;
           return blue ? (
-            <span key={`blue-${index}`} className={styles["blue"]}>{item}</span>
+            <span key={`blue-${index}`} className={styles["blue"]}>
+              {item}
+            </span>
           ) : (
             <Fragment key={item}>{item}</Fragment>
           );
