@@ -23,9 +23,9 @@ const HomeAbout = () => {
 
   return (
     <Container variant={ContainerVariant.small} className={styles["about"]}>
-      <h2 className={styles["heading"]} data-font="snow">
+      <h1 className={styles["heading"]} data-font="snow">
         {homePageContent.info.heading}
-      </h2>
+      </h1>
 
       <div className={styles["content"]}>
         <div className={styles["text"]}>

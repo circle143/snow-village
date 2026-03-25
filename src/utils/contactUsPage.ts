@@ -4,6 +4,7 @@ export enum ContactUsPageInfoType {
   text,
   email,
   phone,
+  address,
 }
 
 export enum FormElementType {
@@ -28,7 +29,7 @@ export const contactUsPageContent = {
       ],
     },
     {
-      type: ContactUsPageInfoType.text,
+      type: ContactUsPageInfoType.address,
       heading: "Office Address",
       content: address,
     },

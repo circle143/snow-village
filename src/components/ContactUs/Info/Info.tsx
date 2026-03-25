@@ -24,6 +24,12 @@ const ContactUsInfo = () => {
                     <a href={`tel:${value}`}>{value}</a>
                   </li>
                 );
+              } else if (item.type === ContactUsPageInfoType.address) {
+                return (
+                  <li key={i}>
+                    <h2>{value}</h2>
+                  </li>
+                );
               } else {
                 return <li key={i}>{value}</li>;
               }
