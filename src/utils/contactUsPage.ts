@@ -97,6 +97,7 @@ export const contactUsPageContent = {
         type: FormElementType.textarea,
         label: "Comment or Message",
         placeholder: "Anything you want to add?",
+        key: "message",
         required: false,
       },
     ],

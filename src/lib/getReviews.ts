@@ -10,10 +10,18 @@ export interface Review {
 
 export async function getReviews(): Promise<Review[]> {
   try {
-    const res = await fetch(`${import.meta.env.VITE_API_URL}/api/reviews`);
+    const baseUrl = (import.meta.env.VITE_API_URL ?? "").toString().trim().replace(/\/$/, "");
+    const res = await fetch(`${baseUrl}/api/reviews`);
     if (!res.ok) throw new Error(`API error: ${res.status}`);
-    const data = await res.json();
-    return data.reviews ?? [];
+
+    const text = await res.text();
+    try {
+      const data = JSON.parse(text);
+      return data.reviews ?? [];
+    } catch (parseError) {
+      console.error("[getReviews] Unexpected response (not JSON):", text);
+      return [];
+    }
   } catch (error) {
     console.error("[getReviews] Failed:", error);
     return [];

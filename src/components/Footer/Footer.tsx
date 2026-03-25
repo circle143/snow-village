@@ -70,7 +70,7 @@ const Footer = () => {
           {footer.copyright.map((item) => {
             if (item.href) {
               return (
-                <a href={item.href} target="_blank">
+                <a key={item.href} href={item.href} target="_blank">
                   {item.text}
                 </a>
               );
