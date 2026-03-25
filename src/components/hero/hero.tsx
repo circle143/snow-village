@@ -17,7 +17,7 @@ const Hero = ({ image, currentPage }: HeroProps) => {
         loop
         playsInline
       />
-    </Container>
+    </Container>  
   );
 };
 

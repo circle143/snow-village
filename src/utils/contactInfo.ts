@@ -3,7 +3,7 @@ export const contactEmails = ["snowvillage@cozylounge.in"];
 export const contactPhones = ["+91 9211072266", "+91 9211072266"];
 
 export const address = [
-  "4th Floor, E tower, Spectrum phase 2, sector 75, Noida",
+  "4th Floor, E Tower, Spectrum Metro Phase 2, Sector 75, Noida, Uttar Pradesh 201307",
 ];
 
 export const socialMediaLinks = {

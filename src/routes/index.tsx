@@ -10,9 +10,12 @@ export const Route = createFileRoute("/")({
   component: App,
   head: () => {
     return {
+      title: "Snow Village | Best Snow Theme Park Experience in Noida",
       meta: [
         {
-          title: "Noida's Biggest Snowpark | Snow Village",
+          name: "description",
+          content:
+            "Experience the magic of Snow Village, the ultimate theme park in Noida. Enjoy indoor snow, slides, and family fun at Noida's biggest snowpark.",
         },
       ],
     };
