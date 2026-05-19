@@ -1,4 +1,4 @@
-export const contactEmails = ["snowvillage@cozylounge.in"];
+export const contactEmails = ["info@snowvillage.in"];
 
 export const contactPhones = ["+91 9211072266", "+91 9211072266"];
 
