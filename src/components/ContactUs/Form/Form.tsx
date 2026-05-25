@@ -237,6 +237,22 @@ const ContactUsForm = () => {
         {/* 👇 Optional: Add hidden origin field if not present in form */}
         <input type="hidden" name="origin" value="website" />
 
+        {/* Consent checkbox */}
+        <label className={styles["consent-label"]}>
+          <input
+            type="checkbox"
+            name="consent"
+            required
+            className={styles["consent-checkbox"]}
+          />
+          <span className={styles["consent-text"]}>
+            I Authorize Cozy Foods &amp; Entertainment LLP (Snow Village) And
+            Its Representatives To Contact Me With Updates And Notifications Via
+            Email, SMS, WhatsApp, Call, And RCS. This Will Override Any Registry
+            On DND/NDNC.
+          </span>
+        </label>
+
         <div>
           <Button
             type="submit"

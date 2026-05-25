@@ -57,3 +57,26 @@
     resize: none;
   }
 }
+
+.consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  cursor: pointer;
+}
+
+.consent-checkbox {
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  accent-color: var(--blue-2, #1a73e8);
+}
+
+.consent-text {
+  font-size: clamp(0.7rem, 1vi, 0.8rem);
+  color: hsl(from black h s l / 0.7);
+  font-weight: 400;
+  line-height: 1.5;
+}
