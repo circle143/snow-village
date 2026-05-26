@@ -1,0 +1,40 @@
+.container {
+  display: grid;
+  gap: 1.75rem;
+  padding-block: 3rem 5rem;
+}
+
+.heading {
+  font-size: clamp(1.125rem, 1.5vi, 1.5rem);
+}
+
+.intro {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.section {
+  display: grid;
+  gap: 0.5rem;
+
+  > ol,
+  > ul {
+    padding: 0;
+    margin: 0;
+
+    list-style-position: inside;
+  }
+}
+
+/* style bare links inside the policy */
+.container a {
+  color: inherit;
+  text-underline-offset: 3px;
+  text-decoration-color: currentColor;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.container a:hover {
+  opacity: 1;
+}

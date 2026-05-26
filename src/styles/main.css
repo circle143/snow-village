@@ -75,7 +75,8 @@ body {
 }
 
 .gallery-page,
-.terms-and-conditions-page {
+.terms-and-conditions-page,
+.privacy-policy-page {
   display: grid;
   gap: 2.5rem;
   margin-block-end: clamp(2rem, 3vi, 3rem);

@@ -1,15 +1,15 @@
 import HeroVideoTitle from "@/components/hero/Herovideotitle";
-import TermsAndConditions from "@/components/TermsAndConditions/TermsAndConditions";
+import PrivacyPolicy from "@/components/PrivacyPolicy/PrivacyPolicy";
 import { WebpageValue } from "@/utils/pages";
 import { createFileRoute } from "@tanstack/react-router";
 
-export const Route = createFileRoute("/terms-and-conditions/")({
+export const Route = createFileRoute("/privacy-policy/")({
   component: RouteComponent,
   head: () => {
     return {
       meta: [
         {
-          title: "Snow Village - Terms and Conditions",
+          title: "Snow Village - Privacy Policy",
         },
       ],
     };
@@ -18,14 +18,14 @@ export const Route = createFileRoute("/terms-and-conditions/")({
 
 function RouteComponent() {
   return (
-    <div className="terms-and-conditions-page">
+    <div className="privacy-policy-page">
       <HeroVideoTitle
         image="/home/Snow-Village.mp4"
-        currentPage={WebpageValue.termsAndConditions}
-        title="Terms & Conditions"
+        currentPage={WebpageValue.privacyPolicy}
+        title="Privacy Policy"
       />
-
-      <TermsAndConditions />
+      <PrivacyPolicy />
+      
     </div>
   );
 }

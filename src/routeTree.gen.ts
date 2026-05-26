@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as TermsAndConditionsIndexRouteImport } from './routes/terms-and-conditions/index'
+import { Route as PrivacyPolicyIndexRouteImport } from './routes/privacy-policy/index'
 import { Route as GalleryIndexRouteImport } from './routes/gallery/index'
 import { Route as ContactUsIndexRouteImport } from './routes/contact-us/index'
 import { Route as ActivitiesIndexRouteImport } from './routes/activities/index'
@@ -24,6 +25,11 @@ const IndexRoute = IndexRouteImport.update({
 const TermsAndConditionsIndexRoute = TermsAndConditionsIndexRouteImport.update({
   id: '/terms-and-conditions/',
   path: '/terms-and-conditions/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyIndexRoute = PrivacyPolicyIndexRouteImport.update({
+  id: '/privacy-policy/',
+  path: '/privacy-policy/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GalleryIndexRoute = GalleryIndexRouteImport.update({
@@ -53,6 +59,7 @@ export interface FileRoutesByFullPath {
   '/activities': typeof ActivitiesIndexRoute
   '/contact-us': typeof ContactUsIndexRoute
   '/gallery': typeof GalleryIndexRoute
+  '/privacy-policy': typeof PrivacyPolicyIndexRoute
   '/terms-and-conditions': typeof TermsAndConditionsIndexRoute
 }
 export interface FileRoutesByTo {
@@ -61,6 +68,7 @@ export interface FileRoutesByTo {
   '/activities': typeof ActivitiesIndexRoute
   '/contact-us': typeof ContactUsIndexRoute
   '/gallery': typeof GalleryIndexRoute
+  '/privacy-policy': typeof PrivacyPolicyIndexRoute
   '/terms-and-conditions': typeof TermsAndConditionsIndexRoute
 }
 export interface FileRoutesById {
@@ -70,6 +78,7 @@ export interface FileRoutesById {
   '/activities/': typeof ActivitiesIndexRoute
   '/contact-us/': typeof ContactUsIndexRoute
   '/gallery/': typeof GalleryIndexRoute
+  '/privacy-policy/': typeof PrivacyPolicyIndexRoute
   '/terms-and-conditions/': typeof TermsAndConditionsIndexRoute
 }
 export interface FileRouteTypes {
@@ -80,6 +89,7 @@ export interface FileRouteTypes {
     | '/activities'
     | '/contact-us'
     | '/gallery'
+    | '/privacy-policy'
     | '/terms-and-conditions'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -88,6 +98,7 @@ export interface FileRouteTypes {
     | '/activities'
     | '/contact-us'
     | '/gallery'
+    | '/privacy-policy'
     | '/terms-and-conditions'
   id:
     | '__root__'
@@ -96,6 +107,7 @@ export interface FileRouteTypes {
     | '/activities/'
     | '/contact-us/'
     | '/gallery/'
+    | '/privacy-policy/'
     | '/terms-and-conditions/'
   fileRoutesById: FileRoutesById
 }
@@ -105,6 +117,7 @@ export interface RootRouteChildren {
   ActivitiesIndexRoute: typeof ActivitiesIndexRoute
   ContactUsIndexRoute: typeof ContactUsIndexRoute
   GalleryIndexRoute: typeof GalleryIndexRoute
+  PrivacyPolicyIndexRoute: typeof PrivacyPolicyIndexRoute
   TermsAndConditionsIndexRoute: typeof TermsAndConditionsIndexRoute
 }
 
@@ -122,6 +135,13 @@ declare module '@tanstack/react-router' {
       path: '/terms-and-conditions'
       fullPath: '/terms-and-conditions'
       preLoaderRoute: typeof TermsAndConditionsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy/': {
+      id: '/privacy-policy/'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/gallery/': {
@@ -161,6 +181,7 @@ const rootRouteChildren: RootRouteChildren = {
   ActivitiesIndexRoute: ActivitiesIndexRoute,
   ContactUsIndexRoute: ContactUsIndexRoute,
   GalleryIndexRoute: GalleryIndexRoute,
+  PrivacyPolicyIndexRoute: PrivacyPolicyIndexRoute,
   TermsAndConditionsIndexRoute: TermsAndConditionsIndexRoute,
 }
 export const routeTree = rootRouteImport

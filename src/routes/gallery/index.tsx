@@ -43,10 +43,10 @@ function RouteComponent() {
     <div className="gallery-page">
       {" "}
       <HeroVideoTitle
-  image="/home/Snow-Village.mp4"
-  currentPage={WebpageValue.gallery}
-  title="Gallery"
-/>  
+        image="/home/Snow-Village.mp4"
+        currentPage={WebpageValue.gallery}
+        title="Gallery"
+      />
       <Filters key={filter} />
       <Container variant={ContainerVariant.normal}>
         <Images images={images} key={filter} />

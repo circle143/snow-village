@@ -4,4 +4,6 @@ export enum WebpageValue {
   activities = "activities-page",
   gallery = "gallery-page",
   contactUs = "contact-us-page",
+  privacyPolicy = "privacy-policy-page",
+  termsAndConditions = "terms-and-conditions-page",
 }
